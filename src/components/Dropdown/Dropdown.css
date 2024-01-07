@@ -1,0 +1,17 @@
+.item {
+    color: white;
+    height: 40px;
+    padding-top: 3px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.item > p {
+    padding-left: 10px;
+}
+
+.item:hover {
+    background: #655e5e;
+    border-radius: 0.375rem;
+}
