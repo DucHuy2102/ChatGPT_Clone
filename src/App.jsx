@@ -3,6 +3,7 @@ import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import DropdownMenu from './components/Dropdown/DropdownMenu';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
     const [clicked, setClicked] = useState(false);
@@ -45,7 +46,28 @@ function App() {
             </div>
 
             {/* main content */}
-            <div className='bg-red-500 col-span-4'></div>
+            <div className='bg-[#343541] col-span-4 relative'>
+                <div className='top_content'></div>
+                <div></div>
+
+                {/* input chat */}
+                <div className='input_chat flex flex-col justify-center items-center w-full absolute bottom-0 mb-2'>
+                    <div className='w-full flex justify-center items-center relative'>
+                        <input
+                            type='text'
+                            placeholder='Message ChatGPT ...'
+                            className='w-[800px] px-4 py-4 rounded-lg bg-[#343541] border border-neutral-600 text-white'
+                        />
+                        <FontAwesomeIcon
+                            icon={faArrowUp}
+                            className='iconArrowUp absolute right-[230px] px-2 py-2 text-xl bg-[#494a54] rounded-lg hover:bg-[#2f2f37]'
+                        />
+                    </div>
+                    <p className='text-sm text-white mt-2'>
+                        ChatGPT can make mistakes. Consider checking important information.
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }
